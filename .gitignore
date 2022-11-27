@@ -2,6 +2,7 @@
 /public/build
 /public/hot
 /public/storage
+/public/vendor
 /storage/*.key
 /vendor
 .env
@@ -16,3 +17,7 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+/_ide_helper.php
+/_ide_helper_models.php
+/.phpstorm.meta.php
+/tmp

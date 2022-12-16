@@ -25,6 +25,8 @@
 <body class="antialiased">
     {{ $slot }}
 
+    @include('components.bottom-navigation')
+
     @livewire('notifications')
 </body>
 

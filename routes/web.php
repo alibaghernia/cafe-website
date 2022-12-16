@@ -1,5 +1,10 @@
 <?php
 
+use App\Http\Controllers\TelegramController;
+use App\Http\Livewire\Blog;
+use App\Http\Livewire\Events;
+use App\Http\Livewire\Home;
+use App\Http\Livewire\Menu;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +18,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('blog', Blog::class)
+    ->name('blog');
+

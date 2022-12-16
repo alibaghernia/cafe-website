@@ -21,6 +21,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', Home::class)
     ->name('home');
 
+Route::get('menu', Menu::class)
+    ->name('menu');
+
 Route::get('events', Events::class)
     ->name('events');
 

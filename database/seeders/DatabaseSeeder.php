@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 use App\Models\Event;
+use App\Models\HomePage;
 use App\Models\User;
 use App\Models\Weekday;
 use Illuminate\Database\Seeder;
@@ -63,7 +64,7 @@ class DatabaseSeeder extends Seeder
             'weekday_id' => $FRIDAY->id,
         ]);
 
-
+        HomePage::create(['content' => 'test']);
 
         $this->call([
             TestDataSeeder::class,

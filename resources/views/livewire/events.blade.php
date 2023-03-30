@@ -3,12 +3,12 @@
         @if ($weekday->events->count() === 0)
             @continue
         @endif
-        <div class="text-center mt-4">
+        <div class="text-center mt-4 ">
             {{ $weekday->name }}
         </div>
         <hr class="w-16 mx-auto mb-1">
         @foreach ($weekday->events as $event)
-            <div class="shadow rounded mx-8 p-4">
+            <div class="shadow rounded mx-8 p-4 bg-[#ff0073] mt-1 text-white">
                 <div class="flex justify-between">
                     <div class="">{{ $event->name }}</div>
                     <div class="">

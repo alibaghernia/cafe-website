@@ -1,12 +1,12 @@
 <div class="w-full mt-16">
     {{--  if shown only tablet/mobile  --}}
     <section id="bottom-navigation" class="md:hidden block fixed inset-x-0 bottom-0 z-10 bg-white shadow">
-    {{--  if shown all size  --}}
-    {{--  <section id="bottom-navigation" class="block fixed inset-x-0 bottom-0 z-10 bg-white shadow">  --}}
+        {{--  if shown all size  --}}
+        {{--  <section id="bottom-navigation" class="block fixed inset-x-0 bottom-0 z-10 bg-white shadow">  --}}
         <div id="tabs" class="flex justify-between">
             <a href="{{ route('home') }}"
-                class="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1
-            @if (request()->url() === route('home')) text-teal-500 @endif
+                class="w-full focus:text-[#ff0073] hover:text-[#ff0073] justify-center inline-block text-center pt-2 pb-1
+            @if (request()->url() === route('home')) text-[#ff0073] @endif
             ">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="w-6 h-6 inline-block mb-1">
@@ -17,8 +17,8 @@
                 <span class="tab tab-home block text-xs">Home</span>
             </a>
             <a href="{{ route('menu') }}"
-                class="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1
-            @if (request()->url() === route('menu')) text-teal-500 @endif">
+                class="w-full focus:text-[#ff0073] hover:text-[#ff0073] justify-center inline-block text-center pt-2 pb-1
+            @if (request()->url() === route('menu')) text-[#ff0073] @endif">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="w-6 h-6 inline-block mb-1">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -28,8 +28,8 @@
                 <span class="tab tab-kategori block text-xs">Menu</span>
             </a>
             <a href="{{ route('events') }}"
-                class="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1
-            @if (request()->url() === route('events')) text-teal-500 @endif
+                class="w-full focus:text-[#ff0073] hover:text-[#ff0073] justify-center inline-block text-center pt-2 pb-1
+            @if (request()->url() === route('events')) text-[#ff0073] @endif
             ">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="w-6 h-6 inline-block mb-1">
@@ -39,9 +39,9 @@
 
                 <span class="tab tab-explore block text-xs">Events</span>
             </a>
-            <a href="{{ route('blog') }}"
-                class="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1
-            @if (request()->url() === route('blog')) text-teal-500 @endif
+            {{--  <a href="{{ route('blog') }}"
+                class="w-full focus:text-[#ff0073] hover:text-[#ff0073] justify-center inline-block text-center pt-2 pb-1
+            @if (request()->url() === route('blog')) text-[#ff0073] @endif
             ">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="w-6 h-6 inline-block mb-1">
@@ -50,7 +50,7 @@
                 </svg>
 
                 <span class="tab tab-whishlist block text-xs">Blog</span>
-            </a>
+            </a>  --}}
         </div>
     </section>
 </div>

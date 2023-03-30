@@ -12,9 +12,9 @@
         "hekmatinasser/verta": "^8.1",
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^3.0",
-        "laravel/telescope": "^4.9",
         "laravel/tinker": "^2.7",
-        "livewire/livewire": "^2.10"
+        "livewire/livewire": "^2.10",
+        "rebing/graphql-laravel": "^8.3"
     },
     "require-dev": {
         "doctrine/dbal": "^3.5",

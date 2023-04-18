@@ -1,8 +1,8 @@
 <div class="w-full mt-16">
     {{--  if shown only tablet/mobile  --}}
-    <section id="bottom-navigation" class="md:hidden block fixed inset-x-0 bottom-0 z-10 bg-white shadow">
-        {{--  if shown all size  --}}
-        {{--  <section id="bottom-navigation" class="block fixed inset-x-0 bottom-0 z-10 bg-white shadow">  --}}
+    {{--  <section id="bottom-navigation" class="md:hidden block fixed inset-x-0 bottom-0 z-10 bg-white shadow">  --}}
+    {{--  if shown all size  --}}
+    <section id="bottom-navigation" class="block fixed inset-x-0 bottom-0 z-10 bg-white shadow">
         <div id="tabs" class="flex justify-between">
             <a href="{{ route('home') }}"
                 class="w-full focus:text-[#ff0073] hover:text-[#ff0073] justify-center inline-block text-center pt-2 pb-1

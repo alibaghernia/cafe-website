@@ -19,9 +19,9 @@ class MenuCategoryResource extends Resource
     protected static ?string $model = MenuCategory::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
-    protected static ?string $navigationGroup = 'Menu';
-    protected static ?string $label = 'Category';
-    protected static ?string $pluralLabel = 'Categories';
+    protected static ?string $navigationGroup = 'منو';
+    protected static ?string $label = 'دسته بندی';
+    protected static ?string $pluralLabel = 'دسته بندی ها';
 
     public static function form(Form $form): Form
     {

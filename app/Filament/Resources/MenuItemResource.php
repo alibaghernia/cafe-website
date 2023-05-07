@@ -21,19 +21,21 @@ class MenuItemResource extends Resource
     protected static ?string $model = MenuItem::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
-    protected static ?string $navigationGroup = 'Menu';
-    protected static ?string $label = 'Item';
-    protected static ?string $pluralLabel = 'Items';
+    protected static ?string $navigationGroup = 'منو';
+    protected static ?string $label = 'آیتم';
+    protected static ?string $pluralLabel = 'آیتم ها';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
                 Forms\Components\TextInput::make('name')
+                    ->label('نام')
                     ->required()
                     ->maxLength(255),
 
                 Forms\Components\Textarea::make('description')
+                    ->label('توضیحات')
                     ->maxLength(65535),
 
                 // Forms\Components\TextInput::make('image_path')
@@ -42,10 +44,12 @@ class MenuItemResource extends Resource
 
                 // Forms\Components\FileUpload::make('image_path')
                 Forms\Components\FileUpload::make('image_path')
+                    ->label('عکس')
                     ->disableLabel()
                     ->image(),
 
                 Forms\Components\TextInput::make('price')
+                    ->label('قیمت')
                     ->required()
                     ->integer()
                     ->minValue(0)
@@ -62,7 +66,7 @@ class MenuItemResource extends Resource
                     ),
 
                 Forms\Components\Select::make('menu_category_id')
-                    ->label('category')
+                    ->label('دسته بندی')
                     ->required()
                     ->options(MenuCategory::where('is_active', true)
                         ->get()
@@ -77,27 +81,30 @@ class MenuItemResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\ImageColumn::make('image_path')
-                    ->label('Image'),
+                    ->label('عکس'),
 
                 Tables\Columns\TextColumn::make('name')
+                    ->label('نام')
                     ->searchable(),
 
                 Tables\Columns\TextColumn::make('description')
+                    ->label('توضیحات')
                     ->limit(50)
                     ->toggleable(),
 
                 Tables\Columns\TextColumn::make('price')
+                    ->label('قیمت')
                     ->searchable(),
 
                 Tables\Columns\TextColumn::make('menuCategory.name')
-                    ->label('category')
+                    ->label('دسته بندی')
                     ->toggleable(),
 
 
             ])
             ->filters([
                 SelectFilter::make('menuCategory')
-                    ->label('Category')
+                    ->label('دسته بندی')
                     ->relationship('menuCategory', 'name'),
             ])
             ->actions([

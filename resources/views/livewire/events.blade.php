@@ -1,10 +1,22 @@
+@php
+    $fa_weekdays=[
+        'Saturday'=>'شنبه',
+    'Sunday'=>'یکشنبه',
+    'Monday'=>'دوشنبه',
+    'Tuesday'=>'سه‌شنبه',
+    'Wednesday'=>'چهارشنبه',
+    'Thursday'=>'پنجشنبه',
+    'Friday'=>'جمعه',
+    ]
+@endphp
+
 <div class="mx-auto container">
     @foreach ($weekdayes as $weekday)
         @if ($weekday->events->count() === 0)
             @continue
         @endif
         <div class="text-center mt-4 ">
-            {{ $weekday->name }}
+            {{ $fa_weekdays[$weekday->name] }}
         </div>
         <hr class="w-16 mx-auto mb-1">
         @foreach ($weekday->events as $event)

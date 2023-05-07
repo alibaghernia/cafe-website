@@ -35,31 +35,31 @@ class DatabaseSeeder extends Seeder
 
 
         Event::create([
-            'name' => 'Free discussion',
+            'name' => 'جلسه روانشناسی',
             'start' => '19:00',
             'weekday_id' => $SUNDAY->id,
         ]);
 
         Event::create([
-            'name' => 'Free discussion',
+            'name' => 'بازی مافیا',
             'start' => '19:00',
             'weekday_id' => $MONDAY->id,
         ]);
 
         Event::create([
-            'name' => 'Free discussion',
+            'name' => 'فینال فوتبال دستی',
             'start' => '19:00',
             'weekday_id' => $TUESDAY->id,
         ]);
 
         Event::create([
-            'name' => 'Free discussion',
+            'name' => 'مکالمه انگلیسی',
             'start' => '10:30',
             'weekday_id' => $THURSDAY->id,
         ]);
 
         Event::create([
-            'name' => 'Mafia game',
+            'name' => 'بازی مافیا',
             'start' => '18:30',
             'weekday_id' => $FRIDAY->id,
         ]);

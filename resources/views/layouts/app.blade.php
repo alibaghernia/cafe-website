@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" dir="rtl">
 
 <head>
     <meta charset="utf-8">
@@ -22,7 +22,7 @@
 </head>
 
 
-<body class="antialiased">
+<body class="antialiased bg-[#e4ebe5]">
     {{ $slot }}
 
     @include('components.bottom-navigation')

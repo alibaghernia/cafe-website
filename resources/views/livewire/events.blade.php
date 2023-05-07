@@ -8,7 +8,7 @@
         </div>
         <hr class="w-16 mx-auto mb-1">
         @foreach ($weekday->events as $event)
-            <div class="shadow rounded-2xl mx-5 p-4 bg-[#ff0073] mt-1 text-white">
+            <div class="shadow rounded-2xl mx-5 p-4 bg-[#2c4d41] mt-1 text-white">
                 <div class="flex justify-between">
                     <div class="">{{ $event->name }}</div>
                     <div class="">

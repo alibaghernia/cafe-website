@@ -1,5 +1,10 @@
 @import '../../vendor/filament/forms/dist/module.esm.css';
+@import "../../node_modules/vazirmatn/Vazirmatn-font-face.css";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    font-family: Vazirmatn, sans-serif;
+}

@@ -18,7 +18,9 @@ class EventResource extends Resource
 {
     protected static ?string $model = Event::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationIcon = 'heroicon-o-calendar';
+    protected static ?string $label = 'ایونت';
+    protected static ?string $pluralLabel = 'ایونت ها';
 
     public static function form(Form $form): Form
     {
@@ -27,23 +29,27 @@ class EventResource extends Resource
 
 
                 Forms\Components\TextInput::make('name')
+                    ->label('نام')
                     ->required()
                     ->maxLength(255),
 
                 Forms\Components\Textarea::make('description')
+                    ->label('توضیحات')
                     ->maxLength(65535),
 
                 Forms\Components\Select::make('weekday_id')
-                    ->label('weekday')
+                    ->label('روز هفته')
                     ->options(Weekday::all()
                         ->pluck('name', 'id'))
                     ->required(),
 
                 Forms\Components\TimePicker::make('start')
+                    ->label('ساعت شروع')
                     ->withoutSeconds()
                     ->required(),
 
                 Forms\Components\TimePicker::make('end')
+                    ->label('ساعت پایان')
                     ->withoutSeconds(),
             ]);
     }
@@ -53,11 +59,15 @@ class EventResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('name')
+                    ->label('نام')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('weekday.name'),
+                Tables\Columns\TextColumn::make('weekday.name')
+                    ->label('روز هفته'),
                 Tables\Columns\TextColumn::make('start')
+                    ->label('ساعت شروع')
                     ->time('H:i'),
                 Tables\Columns\TextColumn::make('end')
+                    ->label('ساعت پایان')
                     ->time('H:i'),
             ])
             ->filters([

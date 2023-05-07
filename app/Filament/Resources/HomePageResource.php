@@ -17,18 +17,20 @@ class HomePageResource extends Resource
 {
     protected static ?string $model = HomePage::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
-    protected static ?string $label = 'Home Page';
-    protected static ?string $pluralLabel = 'Home Page';
+    protected static ?string $navigationIcon = 'heroicon-o-document-text';
+    protected static ?string $label = 'صفحه اصلی';
+    protected static ?string $pluralLabel = 'صفحه اصلی';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
                 Forms\Components\FileUpload::make('image')
+                    ->label('عکس')
                     ->image()
                     ->columnSpanFull(),
                 Forms\Components\RichEditor::make('content')
+                    ->label('محتوا')
                     ->maxLength(65535)
                     ->columnSpanFull(),
             ]);

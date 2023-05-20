@@ -1,3 +1,4 @@
+@section('page_title', 'ایونت ها')
 @php
     $fa_weekdays=[
         'Saturday'=>'شنبه',

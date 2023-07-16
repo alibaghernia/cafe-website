@@ -16,6 +16,10 @@ class MenuItemsRelationManager extends RelationManager
     protected static string $relationship = 'menuItems';
 
     protected static ?string $recordTitleAttribute = 'name';
+    protected static ?string $label = 'آیتم';
+    protected static ?string $pluralLabel = 'آیتم ها';
+
+
 
     public static function form(Form $form): Form
     {
@@ -26,7 +30,8 @@ class MenuItemsRelationManager extends RelationManager
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('name'),
+                Tables\Columns\TextColumn::make('name')
+                ->label('نام'),
             ])
             ->filters([
                 //

@@ -76,6 +76,7 @@ class Login extends Component implements HasForms
     {
         return [
             TextInput::make('username')
+                ->label('نام کاربری')
                 ->minLength(4)
                 ->required()
                 ->autocomplete(),

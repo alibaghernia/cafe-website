@@ -28,11 +28,14 @@ class MenuCategoryResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('name')
+                    ->label('نام')
                     ->required()
                     ->maxLength(255),
                 Forms\Components\Textarea::make('description')
+                    ->label('توضیحات')
                     ->maxLength(65535),
                 Forms\Components\Toggle::make('is_active')
+                    ->label('فعال')
                     ->required()
                     ->default(true),
             ]);
@@ -43,11 +46,14 @@ class MenuCategoryResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('name')
+                    ->label('نام')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('description')
+                    ->label('توضیحات')
                     ->limit(50)
                     ->toggleable(),
                 Tables\Columns\IconColumn::make('is_active')
+                    ->label('فعال')
                     ->boolean(),
             ])
             ->filters([

@@ -18,35 +18,35 @@ class TestDataSeeder extends Seeder
     {
 
         $coffees = MenuCategory::create([
-            'name' => 'Coffees',
+            'name' => 'قهوه',
         ]);
 
         $hotDrinks = MenuCategory::create([
-            'name' => 'Hot drinks',
+            'name' => 'نوشیدنی گرم',
         ]);
 
         $herbalDrinks = MenuCategory::create([
-            'name' => 'Herbal drinks',
+            'name' => 'نوشیدنی گیاهی',
         ]);
 
         $essencedWater = MenuCategory::create([
-            'name' => 'Essenced water',
+            'name' => 'نوشیدنی های اسانس دار',
         ]);
 
         $mocktails = MenuCategory::create([
-            'name' => 'Mocktails',
+            'name' => 'موکتل',
         ]);
 
         $milkshakes = MenuCategory::create([
-            'name' => 'Milkshakes',
+            'name' => 'میلک شیک',
         ]);
 
         $snacks = MenuCategory::create([
-            'name' => 'Snacks',
+            'name' => 'اسنک',
         ]);
 
         $cakes = MenuCategory::create([
-            'name' => 'Cakes',
+            'name' => 'کیک',
         ]);
     }
 }
